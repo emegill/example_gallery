@@ -1,6 +1,6 @@
 // python -m SimpleHTTPServer run in terminal
 
-const myList = document.querySelector('.json_test');
+const galleryContainer = document.querySelector('.gallery-container');
 const sortTitleBtn = document.querySelector('.sort__btn__title');
 const sortPriceBtn = document.querySelector('.sort__btn__price');
 const sortRatingBtn = document.querySelector('.sort__btn__rating');
@@ -15,7 +15,7 @@ function append(parent, el) {
 }
 
 function generateGalleryMarkup(tileData) {
-    myList.innerHTML = '';
+    galleryContainer.innerHTML = '';
     
     for (let i = 0; i < tileData.length; i++) {
         const tile = tileData[i];
@@ -37,7 +37,7 @@ function generateGalleryMarkup(tileData) {
         append(listItem, price);
         append(listItem, rating);
 
-        myList.appendChild(listItem);
+        galleryContainer.appendChild(listItem);
     }
 }
 

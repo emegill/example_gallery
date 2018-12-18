@@ -3,6 +3,10 @@ body {
     margin: 0 auto;
 }
 
+.u-spacer {
+    margin-bottom: 20px; 
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -51,9 +55,8 @@ body {
     font-weight: 300;
     line-height: 3;
     font-family: latio, Arial, sans-serif;
-    padding: 10px;
     text-transform: uppercase;
-    margin-top: 80px;
+    margin-top: 90px;
     font-size: 48px;
 }
 
@@ -63,13 +66,12 @@ body {
 
 .sort {
     display: flex;
-    margin-bottom: 20px;
 }
 
 .sort__content {
     border: 1px solid #DDDDDD;
     width: 450px;
-    height: 100px;
+    padding: 20px;
     text-align: center;
     display: inline-block;
     flex-grow: 1;
