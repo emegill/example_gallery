@@ -1,0 +1,13 @@
+# Build artifacts
+dist/
+node_modules/
+npm-debug.log
+
+# Test artifacts
+coverage/
+
+# Sublime project and workspace files
+*.sublime-*
+
+# Mac OS Files
+.DS_Store
