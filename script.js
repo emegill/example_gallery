@@ -1,9 +1,9 @@
 // python -m SimpleHTTPServer run in terminal
 
 const myList = document.querySelector('.json_test');
-const sortA = document.querySelector('.sort__btn__a');
-const sortB = document.querySelector('.sort__btn__b');
-const sortC = document.querySelector('.sort__btn__c');
+const sortTitleBtn = document.querySelector('.sort__btn__title');
+const sortPriceBtn = document.querySelector('.sort__btn__price');
+const sortRatingBtn = document.querySelector('.sort__btn__rating');
 let tileData;
 
 function createNode(element) {
@@ -14,8 +14,9 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-function galleryGen(tileData) {
+function generateGalleryMarkup(tileData) {
     myList.innerHTML = '';
+    
     for (let i = 0; i < tileData.length; i++) {
         const tile = tileData[i];
 
@@ -45,15 +46,15 @@ fetch('mock_data.json')
     .then((resp) => resp.json())
     .then(function(json) {
         tileData = json.tiles;
-        galleryGen(tileData);
+        generateGalleryMarkup(tileData);
 
     })
 
-sortA.addEventListener("click", runSortA);
-sortB.addEventListener("click", runSortB);
-sortC.addEventListener("click", runSortC);
+sortTitleBtn.addEventListener("click", runSortTitle);
+sortPriceBtn.addEventListener("click", runSortPrice);
+sortRatingBtn.addEventListener("click", runSortRating);
 
-function runSortA(e) {
+function runSortTitle(e) {
     tileData.sort(function(a, b) {
         var nameA = a.name.toLowerCase(),
             nameB = b.name.toLowerCase()
@@ -64,23 +65,23 @@ function runSortA(e) {
         return 0
     })
 
-    galleryGen(tileData);
+    generateGalleryMarkup(tileData);
 }
 
-function runSortB(e) {
+function runSortPrice(e) {
     tileData.sort(function(a, b) {
         return a.price - b.price
     })
 
-    galleryGen(tileData);
+    generateGalleryMarkup(tileData);
 
 }
 
-function runSortC(e) {
+function runSortRating(e) {
     tileData.sort(function(a, b) {
         return a.rating - b.rating
     })
 
-    galleryGen(tileData);
+    generateGalleryMarkup(tileData);
 
 }
