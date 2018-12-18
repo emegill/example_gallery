@@ -13,13 +13,7 @@ Clicking the sorting buttons sorts the gallery tiles by different criteria.
 
 ### Prerequisites
 
-(python)[https://www.python.org/downloads/]
-
-
-### Installing
-
-install the latest verson of python
-
+[python](https://www.python.org/downloads/)
 
 ## Built With
 
