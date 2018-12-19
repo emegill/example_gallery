@@ -24,6 +24,8 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
+// -------- gallery generation using Json data -------- 
+
 function generateGalleryMarkup(tileJsonData) {
     galleryContainer.innerHTML = '';
 
@@ -53,6 +55,8 @@ function generateGalleryMarkup(tileJsonData) {
         galleryContainer.appendChild(listItem);
     }
 }
+
+// -------- Sort btn functions -------- 
 
 function runSortTitle(e) {
     tileJsonData.sort(function(a, b) {
@@ -84,6 +88,8 @@ function runSortRating(e) {
     generateGalleryMarkup(tileJsonData);
 }
 
+// -------- modal generation -------- 
+
 function generateGalleryModal(tileDetails) {
     let img = createNode('img');
     let description = createNode('p');
@@ -101,7 +107,7 @@ function generateGalleryModal(tileDetails) {
 function toggleModal(e) {
     const modalIsOpen = modal.classList.contains('modal__show');
 
-    if(modalIsOpen) {
+    if (modalIsOpen) {
         modalContents.innerHTML = '';
     } else {
         const currentTarget = e.currentTarget;
@@ -116,6 +122,22 @@ function toggleModal(e) {
     modal.classList.toggle("modal__show");
 }
 
+// -------- esc function for exiting modal -------- 
+
+document.addEventListener('keyup', function(event) {
+    if (event.defaultPrevented) {
+        return;
+    }
+
+    let key = event.key || event.keyCode;
+
+    if (key === 'Escape' || key === 'Esc' || key === 27) {
+        toggleModal();
+    }
+});
+
+// -------- Json fetch -------- 
+
 fetch('mock_data.json')
     .then((resp) => resp.json())
     .then(function(json) {
@@ -124,6 +146,5 @@ fetch('mock_data.json')
     });
 
 window.onload = function() {
-    bindEventListeners();  
+    bindEventListeners();
 }
-
