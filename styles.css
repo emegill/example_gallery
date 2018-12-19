@@ -1,5 +1,5 @@
 body {
-    font-family: latio, Arial, sans-serif;
+    font-family: Open Sans, Arial, sans-serif;
     margin: 0 auto;
 }
 
@@ -54,10 +54,12 @@ body {
     text-align: center;
     font-weight: 300;
     line-height: 3;
+    letter-spacing: 5px;
     font-family: latio, Arial, sans-serif;
     text-transform: uppercase;
     margin-top: 90px;
     font-size: 48px;
+    text-shadow: 2px 2px 5px #252627;
 }
 
 .main__content {
@@ -69,7 +71,6 @@ body {
 }
 
 .sort__content {
-    /*border: 1px solid #DDDDDD;*/
     width: 450px;
     padding: 20px;
     text-align: center;
@@ -89,6 +90,8 @@ body {
     transition: 800ms ease all;
     outline: none;
     font-size: 18px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+    border-radius: 5px;
 }
 
 .sort__btn:hover {
