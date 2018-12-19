@@ -42,7 +42,7 @@ function generateGalleryMarkup(tileJsonData) {
         name.innerHTML = 'Title: ' + tile.name;
         price.innerHTML = 'Price: ' + '$' + tile.price;
         rating.innerHTML = 'Rating: ' + tile.rating;
-        listItem.classList.add("w3-col", "w3-row-padding", "s12", "m6", "l4", "gallery__tile");
+        listItem.classList.add("w3-col", "w3-row-padding", "s6", "m6", "l4", "gallery__tile");
 
         listItem.setAttribute('data-slug', tile.slug)
         listItem.addEventListener("click", toggleModal);
