@@ -1,6 +1,8 @@
 body {
     font-family: Open Sans, Arial, sans-serif;
     margin: 0 auto;
+    min-width: 215px;
+    max-width: 1500px;
 }
 
 .u-spacer {
@@ -19,6 +21,8 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    min-width: 215px;
+    max-width: 1500px;
 }
 
 .nav__list {
@@ -66,12 +70,7 @@ body {
     margin-bottom: 20px;
 }
 
-.sort {
-    display: flex;
-}
-
 .sort__content {
-    width: 450px;
     padding: 20px;
     text-align: center;
     display: inline-block;
@@ -84,7 +83,6 @@ body {
     border: none;
     position: relative;
     height: 60px;
-    font-size: 1.6em;
     padding: 0 2em;
     cursor: pointer;
     transition: 800ms ease all;
@@ -181,11 +179,11 @@ body {
 }
 
 .modal__container {
-    margin-left: 32%;
+    margin-left: 36%;
     margin-top: 90px;
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 35%;
+    width: 26%;
     border-radius: 0.5rem;
 }
 
@@ -193,7 +191,9 @@ body {
     width: 80%;
     height: 550px;
     margin: 0 auto;
+    height: 60%;
 }
+
 
 .modal__img {
     width: 100%;
@@ -223,4 +223,82 @@ body {
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+@media screen and (max-width: 760px) {
+    .sort__btn {
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .modal__container {
+        margin-left: 20%;
+        width: 60%;
+    }
+
+
+    .modal__content {
+        width: 80%;
+    }
+
+    .modal__img {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+
+    .modal__container {
+        margin-left: 12%;
+        margin-top: 25%;
+        width: 70%;
+    }
+
+    .modal__content {
+        width: 75%;
+        height: 60%;
+    }
+
+    .modal__description {
+        font-size: 10px;
+    }
+
+    .modal__img {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .gallery__tile p {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .nav__logo h2 {
+        font-size: 16px;
+    }
+
+    .nav__list-item {
+        font-size: 12px;
+    }
+
+    .sort__content {
+        padding: 10px;
+        margin-bottom: 5px;
+
+    }
+
+    .sort__btn {
+        height: 30px;
+        font-size: 14px;
+    }
+
 }
