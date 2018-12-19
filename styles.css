@@ -146,19 +146,28 @@ body {
 }
 
 .modal__container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: 32%;
+    margin-top: 90px;
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 24rem;
+    width: 35%;
     border-radius: 0.5rem;
 }
 
+.modal__content {
+    width: 80%;
+    height: 550px;
+    margin: 0 auto;
+}
+
 .modal__img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 70%;
+    padding-top: 10px;
+}
+
+.modal__description {
+    font-size: 12px;
 }
 
 .modal__close__btn {
@@ -168,7 +177,6 @@ body {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
 }
 
 .modal__close__btn:hover {
@@ -180,4 +188,20 @@ body {
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+@media only screen and (max-width: 415px) {
+
+    .modal__container {
+        margin-left: 12%;
+        margin-top: 40%;
+        width: 75%;
+
+    }
+
+    .modal__content {
+        width: 75%;
+        height: 100%;
+    }
+
 }

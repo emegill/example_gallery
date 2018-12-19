@@ -91,6 +91,7 @@ function generateGalleryModal(tileDetails) {
     modalContents.innerHTML = '';
     img.src = tileDetails.image;
     img.classList.add("modal__img")
+    description.classList.add("modal__description")
     description.innerHTML = tileDetails.description;
 
     append(modalContents, img);
