@@ -90,7 +90,7 @@ body {
     transition: 800ms ease all;
     outline: none;
     font-size: 18px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
 
@@ -239,4 +239,3 @@ body {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-
